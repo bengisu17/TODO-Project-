@@ -38,6 +38,7 @@ function createListElement(newTodo) {
     const li = document.createElement("li");
     li.setAttribute("id", id);
     completed && li.classList.add("checked");
+    
     const okIcon = document.createElement("i");
     okIcon.setAttribute("class", "fas fa-check");
     li.appendChild(okIcon);
@@ -75,7 +76,7 @@ todoUl.addEventListener("click", (e) => {
         }
       });
 
-      
+
       todoInput.addEventListener("keydown", (e) => {
         if (e.code === "Enter") {
           addBtn.click();
